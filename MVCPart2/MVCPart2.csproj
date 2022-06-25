@@ -9,12 +9,12 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{54360369-063B-4AB4-964C-53669437F208}</ProjectGuid>
+    <ProjectGuid>{924D3AEA-9886-4951-9564-879460690A88}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MyMvc9pmBatch</RootNamespace>
-    <AssemblyName>MyMvc9pmBatch</AssemblyName>
+    <RootNamespace>MVCPart2</RootNamespace>
+    <AssemblyName>MVCPart2</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
@@ -131,20 +131,13 @@
     <Content Include="scripts\jquery-1.10.2.min.js" />
     <Content Include="scripts\modernizr-2.6.2.js" />
     <Content Include="Web.config" />
-    <Content Include="Views\New\GetMeView.cshtml" />
-    <Content Include="Views\Default\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
-    <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\NewController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\DepartmentModel.cs" />
-    <Compile Include="Models\EmpDept.cs" />
-    <Compile Include="Models\EmployeeeModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -155,20 +148,11 @@
     </Content>
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Default\Index.cshtml" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="scripts\jquery-1.10.2.min.map" />
-    <Content Include="Views\New\GetMeView2.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\New\GetMeView3.cshtml" />
-    <Content Include="Views\New\GetMeView4.cshtml" />
-    <Content Include="Views\New\GetMeView5.cshtml" />
-    <Content Include="Views\New\GetMeView6.cshtml" />
-    <Content Include="Views\New\GetMeView7.cshtml" />
-    <Content Include="Views\New\ExampleView1.cshtml" />
-    <Content Include="Views\New\ExampleView2.cshtml" />
-    <Content Include="Views\Shared\_MyPartialView.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -178,6 +162,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -192,9 +177,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>57980</DevelopmentServerPort>
+          <DevelopmentServerPort>56595</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:57980/</IISUrl>
+          <IISUrl>http://localhost:56595/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

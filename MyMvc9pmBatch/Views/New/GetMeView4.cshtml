@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewBag.Title = "GetMeView4";
+}
+
+<h2>GetMeView4</h2>
+
+<table>
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Salary</th>
+    </tr>
+    @foreach (var item in ViewBag.employeedDetail)
+    {
+        <tr>
+            <td>@item.EmpId</td>
+            <td>@item.EmpName</td>
+            <td>@item.EmpSalary</td>
+        </tr>
+    }
+</table>

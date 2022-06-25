@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
 
-namespace MyMvc9pmBatch
+namespace MVCPart2
 {
     public class RouteConfig
     {
@@ -14,17 +14,10 @@ namespace MyMvc9pmBatch
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
-                name: "Default21",
-                url: "pista/house",
-                defaults: new { controller = "new", action = "Index", id = UrlParameter.Optional }
-            );
-
-            routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional}
+                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
         }
     }
 }
- 

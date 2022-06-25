@@ -1,0 +1,40 @@
+﻿@model  MyMvc9pmBatch.Models.EmpDept
+@{
+    ViewBag.Title = "GetMeView7";
+}
+
+<h2>GetMeView7</h2>
+
+<table class="table table-bordered table-responsive table-striped">
+    <tr>
+        <th>EmpId</th>
+        <th>Name</th>
+        <th>Salary</th>
+    </tr>
+    @foreach (var item in Model.Emp)
+    {
+        <tr>
+            <td>@item.EmpId</td>
+            <td>@item.EmpName</td>
+            <td>@item.EmpSalary</td>
+        </tr>
+    }
+
+</table>
+
+
+<table class="table table-bordered table-responsive table-striped">
+    <tr>
+        <th>DeptId</th>
+        <th>Dept Name</th>
+        
+    </tr>
+    @foreach (var item in Model.dept)
+    {
+        <tr>
+            <td>@item.DeptId</td>
+            <td>@item.DeptName</td>
+        </tr>
+    }
+
+</table>
