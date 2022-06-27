@@ -167,7 +167,24 @@ namespace MyMvc9pmBatch.Controllers
 
         public ActionResult ExampleView2()
         {
-            return View();
+            List<EmployeeeModel> listObj = new List<EmployeeeModel>();
+
+            EmployeeeModel emp = new EmployeeeModel();
+            emp.EmpId = 1;
+            emp.EmpName = "Yash";
+            emp.EmpSalary = 51000;
+
+
+            EmployeeeModel emp1 = new EmployeeeModel();
+            emp1.EmpId = 2;
+            emp1.EmpName = "kabir";
+            emp1.EmpSalary = 61000;
+
+            listObj.Add(emp);
+            listObj.Add(emp1);
+
+
+            return View(listObj);
         }
 
         public ActionResult GetDefaultIndexView()

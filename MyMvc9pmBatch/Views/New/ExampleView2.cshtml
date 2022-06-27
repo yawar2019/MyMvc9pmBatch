@@ -1,8 +1,39 @@
-﻿
+﻿@model List<MyMvc9pmBatch.Models.EmployeeeModel>
 @{
     ViewBag.Title = "ExampleView2";
 }
 
 <h2>ExampleView2</h2>
 
-@Html.Partial("_MyPartialView")
+@{
+    var s = Html.Partial("_MyPartialView2", Model);
+    int a = 10;
+    if (a == 10)
+    {
+        @s
+    }
+
+    }<br />
+
+
+@{
+    Html.RenderPartial("_MyPartialView2", Model);
+    
+    
+    }
+
+@*partial method return type is mvchtml string
+ReenderPartial MEthod return type is void
+
+
+here who is faster?
+Renderpartial method is faster
+
+Reason:RenderPartial do single work and Partial method do 2 work
+
+what work RenderPartial do?
+it just render partial view.
+
+What work Partial Method do?
+it Render Partial View
+it Return string as a result which u can use and display based on condition*@
