@@ -9,7 +9,7 @@ namespace MyMvc9pmBatch.Controllers
 {
     public class NewController : Controller
     {
-        // GET: New
+        // GET: New Vamsi
         public string Index()
         {
             return "hello world";
