@@ -199,6 +199,54 @@ namespace MyMvc9pmBatch.Controllers
             return View("GetMeView6",emp);
         }
 
+        public JsonResult Getjson()
+        {
+            EmployeeeModel emp = new EmployeeeModel();
+            emp.EmpId = 1;
+            emp.EmpName = "Jacson";
+            emp.EmpSalary = 83939;
 
+
+            EmployeeeModel emp1 = new EmployeeeModel();
+            emp1.EmpId = 2;
+            emp1.EmpName = "kevin";
+            emp1.EmpSalary = 33939;
+
+
+            EmployeeeModel emp2 = new EmployeeeModel();
+            emp2.EmpId = 1;
+            emp2.EmpName = "peter";
+            emp2.EmpSalary = 73939;
+
+            List<EmployeeeModel> listemp = new List<EmployeeeModel>();
+            listemp.Add(emp);
+            listemp.Add(emp1);
+            listemp.Add(emp2);
+
+
+
+            return Json(listemp,JsonRequestBehavior.AllowGet);
+        }
+        public ActionResult getAccessJsonData()
+        {
+            return View();
+        }
+
+        public FileResult GetFileData()
+        {
+            return File("~/Web.config", "text");
+        }
+        public FileResult GetFileData2()
+        {
+            return File("~/Web.config", "application/xml");
+        }
+        public FileResult GetFileData3()
+        {
+            return File("~/ActionResult.pdf", "application/pdf");
+        }
+        public FileResult GetFileData4()
+        {
+            return File("~/Web.config", "application/xml","myweb.config");
+        }
     }
 }
