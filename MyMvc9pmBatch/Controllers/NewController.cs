@@ -200,6 +200,7 @@ namespace MyMvc9pmBatch.Controllers
         }
 
         public JsonResult Getjson()
+
         {
             EmployeeeModel emp = new EmployeeeModel();
             emp.EmpId = 1;
@@ -248,5 +249,42 @@ namespace MyMvc9pmBatch.Controllers
         {
             return File("~/Web.config", "application/xml","myweb.config");
         }
+
+        public ContentResult getContent(int? id)
+        {
+            if (id == 1)
+            {
+                return Content("Hello World");
+            }
+            else if (id == 2)
+            {
+                return Content("<h1 style=color:red>Hello World</h1>");
+            }
+            else
+            {
+                return Content("<script>alert('Hello World')</script>");
+            }
+        }
+
+        public RedirectToRouteResult getRoute()
+        {
+            return RedirectToAction("index","Default",new {id=1});
+        }
+
+        public RedirectToRouteResult getRoute2()
+        {
+            EmployeeeModel emp = new EmployeeeModel();
+            emp.EmpId = 1;
+            emp.EmpName = "Jacson";
+            emp.EmpSalary = 83939;
+
+            return RedirectToAction("index2", "Default",emp);
+        }
+        public RedirectToRouteResult getRoute3()
+        {
+            
+            return RedirectToRoute("Default21");
+        }
+
     }
 }

@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyMvc9pmBatch", "MyMvc9pmBa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCPart2", "MVCPart2\MVCPart2.csproj", "{924D3AEA-9886-4951-9564-879460690A88}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdoNetExample", "AdoNetExample\AdoNetExample.csproj", "{AAD56EE1-9FD7-47A0-9A41-409ADBDDAAE6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{924D3AEA-9886-4951-9564-879460690A88}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{924D3AEA-9886-4951-9564-879460690A88}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{924D3AEA-9886-4951-9564-879460690A88}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AAD56EE1-9FD7-47A0-9A41-409ADBDDAAE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AAD56EE1-9FD7-47A0-9A41-409ADBDDAAE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AAD56EE1-9FD7-47A0-9A41-409ADBDDAAE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AAD56EE1-9FD7-47A0-9A41-409ADBDDAAE6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
