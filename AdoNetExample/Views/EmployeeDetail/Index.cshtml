@@ -26,18 +26,17 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            item.EmpId
+         @item.EmpId
         </td>
         <td>
-         item.EmpName
+         @item.EmpName
         </td>
         <td>
-             item.EmpSalary
+         @item.EmpSalary
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            @Html.ActionLink("Edit", "Edit", new {  id=item.EmpId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.EmpId })
         </td>
     </tr>
 }
