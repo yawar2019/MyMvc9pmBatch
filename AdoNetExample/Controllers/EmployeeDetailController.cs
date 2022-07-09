@@ -18,6 +18,8 @@ namespace AdoNetExample.Controllers
 
         public ActionResult Create()
         {
+            ViewBag.dropdownEmp = new SelectList(db.GetAllEmployees(), "EmpId", "EmpName");
+
             return View();
         }
 
@@ -25,6 +27,9 @@ namespace AdoNetExample.Controllers
         public ActionResult Create(EmployeeModel emp)
         {
             int i = db.SaveEmployee(emp);
+
+            ViewBag.dropdownEmp = new SelectList(db.GetAllEmployees(),"EmpId","EmpName");
+
             if(i>0)
             {
                 return RedirectToAction("Index");
@@ -42,6 +47,25 @@ namespace AdoNetExample.Controllers
         public ActionResult Edit(EmployeeModel emp)
         {
             int i = db.UpdateEmployee(emp);
+            if (i > 0)
+            {
+                return RedirectToAction("Index");
+            }
+            return View();
+        }
+
+
+        public ActionResult Delete(int? id)
+        {
+            EmployeeModel emp = db.GetEmployeeById(id);
+            return View(emp);
+        }
+
+        [HttpPost]
+        [ActionName("Delete")]
+        public ActionResult DeleteConfirmed(int? id)
+        {
+            int i = db.DeleteEmployeeById(id);
             if (i > 0)
             {
                 return RedirectToAction("Index");

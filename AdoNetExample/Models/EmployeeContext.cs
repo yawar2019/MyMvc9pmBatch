@@ -93,5 +93,17 @@ namespace AdoNetExample.Models
 
         }
 
+        public int DeleteEmployeeById(int? id)
+        {
+            SqlCommand cmd = new SqlCommand("usp_DeleteEmployeeById", con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            con.Open();
+            cmd.Parameters.AddWithValue("@EmpId", id);
+            
+            int result = cmd.ExecuteNonQuery();
+            con.Close();
+            return result;
+        }
+
     }
 }

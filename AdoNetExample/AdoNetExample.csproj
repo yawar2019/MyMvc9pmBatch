@@ -162,6 +162,8 @@
     <Content Include="scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\EmployeeDetail\Create.cshtml" />
     <Content Include="Views\EmployeeDetail\Edit.cshtml" />
+    <Content Include="Views\EmployeeDetail\Delete.cshtml" />
+    <Content Include="Views\Shared\_MyMasterLayout.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

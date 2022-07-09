@@ -7,11 +7,22 @@
 
 <form action="~/EmployeeDetail/create" method="post">
     <label>EmpName</label>
-    <input type="text" name="EmpName" />
-
+   @* <input type="text" name="EmpName" />*@
+    @Html.DropDownList("dropdownEmp")
     <label>EmpSalary</label>
     <input type="text" name="EmpSalary" />
 
     <input type="submit" value="Save">
 
 </form>
+
+
+@section Mysection
+{
+    <ul>
+        <li>break</li>
+        <li>kikat</li>
+        <li>choco</li>
+    </ul>
+
+}

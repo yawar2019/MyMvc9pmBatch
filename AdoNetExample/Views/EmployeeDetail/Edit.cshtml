@@ -1,6 +1,7 @@
 ﻿@model AdoNetExample.Models.EmployeeModel
 @{
     ViewBag.Title = "Edit";
+    Layout = "";
 }
 
 <h2>Edit</h2>
@@ -12,7 +13,7 @@
     <input type="text" name="EmpName" value="@Model.EmpName" class="form-control" />
 
     <label>EmpSalary</label>
-    <input type="text" name="EmpSalary" value="@Model.EmpSalary" class="form-control" />
+    <input type="text" name="EmpSalary" value="@Model.EmpSalary" class="form-control" placeholder="EmpSalary"/>
 
     <input type="submit" value="Save" class="btn btn-success">
 
