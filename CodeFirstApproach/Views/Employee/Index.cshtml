@@ -10,6 +10,7 @@
         <th>EmpId</th>
         <th>Name</th>
         <th>Salary</th>
+        <th>ActionLink</th>
     </tr>
     @foreach (var item in Model)
     {
@@ -17,6 +18,8 @@
             <td>@item.EmpId</td>
             <td>@item.EmpName</td>
             <td>@item.EmpSalary</td>
+            <td>@Html.ActionLink("Edit", "Edit", new { Id = @item.EmpId })</td>
+            <td>@Html.ActionLink("Delete","Delete",new { Id = @item.EmpId })</td>
         </tr>
     }
 </table>

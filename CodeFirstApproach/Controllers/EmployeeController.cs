@@ -14,5 +14,65 @@ namespace CodeFirstApproach.Controllers
         {
             return View(db.EmployeeModels.ToList());
         }
+
+        public ActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Create(EmployeeModel Emp)
+        {
+            db.EmployeeModels.Add(Emp);//Generate Insert Script
+            int i = db.SaveChanges();//Execute Our Newly added Record
+            if(i>0)
+            {
+                return RedirectToAction("Index");
+            }
+
+            return View();
+        }
+
+
+        public ActionResult Edit(int? id)
+        {
+            EmployeeModel emp = db.EmployeeModels.Find(id);
+            return View(emp);
+        }
+
+        [HttpPost]
+        public ActionResult Edit(EmployeeModel Emp)
+        {
+            db.Entry(Emp).State = System.Data.Entity.EntityState.Modified;
+            int i = db.SaveChanges();//Execute Our Newly added Record
+            if (i > 0)
+            {
+                return RedirectToAction("Index");
+            }
+
+            return View();
+        }
+        public ActionResult Delete(int? id)
+        {
+            EmployeeModel emp = db.EmployeeModels.Find(id);
+            return View(emp);
+        }
+
+        [HttpPost]
+        [ActionName("Delete")]
+        public ActionResult DeleteConfirmed(int? id)
+        {
+            EmployeeModel emp = db.EmployeeModels.Find(id);
+             db.EmployeeModels.Remove(emp);
+            int i = db.SaveChanges();//Execute Our Newly added Record
+            if (i > 0)
+            {
+
+                return RedirectToAction("Index");
+            }
+
+            return View();
+        }
+
     }
 }
