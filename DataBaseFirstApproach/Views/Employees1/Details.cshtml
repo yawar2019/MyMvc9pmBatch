@@ -1,0 +1,178 @@
+﻿@model DataBaseFirstApproach.Models.Employee
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Employee</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.EmployeeCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EmployeeCode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EmployeeName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EmployeeName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DepartmentId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DepartmentId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Emailid)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Emailid)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Mobileno)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Mobileno)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Adress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Adress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Gender)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Gender)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateOfJoining)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateOfJoining)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DtaeOfReleiving)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DtaeOfReleiving)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.State)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.State)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Salary)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Salary)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DegreeId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DegreeId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SpecializationId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SpecializationId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Photo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Photo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Experience)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Experience)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Fee)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fee)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Createdby)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Createdby)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Createdon)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Createdon)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Updatedby)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Updatedby)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Updatedon)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Updatedon)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.EmployeeId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

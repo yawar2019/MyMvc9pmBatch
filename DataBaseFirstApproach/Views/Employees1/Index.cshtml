@@ -1,0 +1,148 @@
+﻿@model IEnumerable<DataBaseFirstApproach.Models.getEmployee_Result>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.EmployeeCode)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EmployeeName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DepartmentId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Emailid)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Mobileno)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Adress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Gender)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateOfJoining)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DtaeOfReleiving)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.State)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Salary)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DegreeId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SpecializationId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Photo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Experience)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Fee)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Createdby)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Createdon)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Updatedby)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Updatedon)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.EmployeeCode)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EmployeeName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DepartmentId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Emailid)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Mobileno)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Adress)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Gender)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateOfJoining)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DtaeOfReleiving)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.State)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Salary)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DegreeId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SpecializationId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Photo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Experience)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Fee)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Createdby)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Createdon)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Updatedby)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Updatedon)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.EmployeeId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.EmployeeId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.EmployeeId })
+        </td>
+    </tr>
+}
+
+</table>

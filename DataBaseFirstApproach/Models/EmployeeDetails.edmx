@@ -1,0 +1,217 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="SaloonManagementModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Employees">
+          <Key>
+            <PropertyRef Name="EmployeeId" />
+          </Key>
+          <Property Name="EmployeeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="EmployeeCode" Type="varchar" MaxLength="20" />
+          <Property Name="EmployeeName" Type="varchar" MaxLength="20" />
+          <Property Name="DepartmentId" Type="int" />
+          <Property Name="Emailid" Type="varchar" MaxLength="50" />
+          <Property Name="Mobileno" Type="varchar" MaxLength="20" />
+          <Property Name="Adress" Type="varchar(max)" />
+          <Property Name="Gender" Type="varchar" MaxLength="10" />
+          <Property Name="DateOfJoining" Type="datetime" />
+          <Property Name="DtaeOfReleiving" Type="datetime" />
+          <Property Name="State" Type="varchar" MaxLength="50" />
+          <Property Name="Salary" Type="decimal" Precision="18" Scale="3" />
+          <Property Name="DegreeId" Type="int" />
+          <Property Name="SpecializationId" Type="int" />
+          <Property Name="Photo" Type="varchar(max)" />
+          <Property Name="Experience" Type="varchar" MaxLength="20" />
+          <Property Name="Fee" Type="decimal" Precision="18" Scale="3" />
+          <Property Name="Createdby" Type="int" />
+          <Property Name="Createdon" Type="datetime" />
+          <Property Name="Updatedby" Type="int" />
+          <Property Name="Updatedon" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Specilizations">
+          <Key>
+            <PropertyRef Name="SpecilizationId" />
+          </Key>
+          <Property Name="SpecilizationId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SpecilizationName" Type="varchar" MaxLength="100" />
+          <Property Name="DegreeId" Type="int" />
+          <Property Name="CreatedBy" Type="int" />
+          <Property Name="CreatedOn" Type="datetime" />
+          <Property Name="UpdatedBy" Type="int" />
+          <Property Name="UpdatedOn" Type="datetime" />
+        </EntityType>
+        <Function Name="getEmployee" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <EntityContainer Name="SaloonManagementModelStoreContainer">
+          <EntitySet Name="Employees" EntityType="Self.Employees" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Specilizations" EntityType="Self.Specilizations" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="SaloonManagementModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Employee">
+          <Key>
+            <PropertyRef Name="EmployeeId" />
+          </Key>
+          <Property Name="EmployeeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="EmployeeCode" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="EmployeeName" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DepartmentId" Type="Int32" />
+          <Property Name="Emailid" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Mobileno" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Adress" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Gender" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="DateOfJoining" Type="DateTime" Precision="3" />
+          <Property Name="DtaeOfReleiving" Type="DateTime" Precision="3" />
+          <Property Name="State" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Salary" Type="Decimal" Precision="18" Scale="3" />
+          <Property Name="DegreeId" Type="Int32" />
+          <Property Name="SpecializationId" Type="Int32" />
+          <Property Name="Photo" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Experience" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Fee" Type="Decimal" Precision="18" Scale="3" />
+          <Property Name="Createdby" Type="Int32" />
+          <Property Name="Createdon" Type="DateTime" Precision="3" />
+          <Property Name="Updatedby" Type="Int32" />
+          <Property Name="Updatedon" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityContainer Name="SaloonManagementEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Employees" EntityType="Self.Employee" />
+          <EntitySet Name="Specilizations" EntityType="SaloonManagementModel.Specilization" />
+          <FunctionImport Name="getEmployee" ReturnType="Collection(SaloonManagementModel.getEmployee_Result)" />
+        </EntityContainer>
+        <EntityType Name="Specilization">
+          <Key>
+            <PropertyRef Name="SpecilizationId" />
+          </Key>
+          <Property Name="SpecilizationId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SpecilizationName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="DegreeId" Type="Int32" />
+          <Property Name="CreatedBy" Type="Int32" />
+          <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+          <Property Name="UpdatedBy" Type="Int32" />
+          <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+        </EntityType>
+        <ComplexType Name="getEmployee_Result">
+          <Property Type="Int32" Name="EmployeeId" Nullable="false" />
+          <Property Type="String" Name="EmployeeCode" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="EmployeeName" Nullable="true" MaxLength="20" />
+          <Property Type="Int32" Name="DepartmentId" Nullable="true" />
+          <Property Type="String" Name="Emailid" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Mobileno" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="Adress" Nullable="true" />
+          <Property Type="String" Name="Gender" Nullable="true" MaxLength="10" />
+          <Property Type="DateTime" Name="DateOfJoining" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="DtaeOfReleiving" Nullable="true" Precision="23" />
+          <Property Type="String" Name="State" Nullable="true" MaxLength="50" />
+          <Property Type="Decimal" Name="Salary" Nullable="true" Precision="18" Scale="3" />
+          <Property Type="Int32" Name="DegreeId" Nullable="true" />
+          <Property Type="Int32" Name="SpecializationId" Nullable="true" />
+          <Property Type="String" Name="Photo" Nullable="true" />
+          <Property Type="String" Name="Experience" Nullable="true" MaxLength="20" />
+          <Property Type="Decimal" Name="Fee" Nullable="true" Precision="18" Scale="3" />
+          <Property Type="Int32" Name="Createdby" Nullable="true" />
+          <Property Type="DateTime" Name="Createdon" Nullable="true" Precision="23" />
+          <Property Type="Int32" Name="Updatedby" Nullable="true" />
+          <Property Type="DateTime" Name="Updatedon" Nullable="true" Precision="23" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="SaloonManagementModelStoreContainer" CdmEntityContainer="SaloonManagementEntities">
+          <EntitySetMapping Name="Employees">
+            <EntityTypeMapping TypeName="SaloonManagementModel.Employee">
+              <MappingFragment StoreEntitySet="Employees">
+                <ScalarProperty Name="EmployeeId" ColumnName="EmployeeId" />
+                <ScalarProperty Name="EmployeeCode" ColumnName="EmployeeCode" />
+                <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
+                <ScalarProperty Name="DepartmentId" ColumnName="DepartmentId" />
+                <ScalarProperty Name="Emailid" ColumnName="Emailid" />
+                <ScalarProperty Name="Mobileno" ColumnName="Mobileno" />
+                <ScalarProperty Name="Adress" ColumnName="Adress" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="DateOfJoining" ColumnName="DateOfJoining" />
+                <ScalarProperty Name="DtaeOfReleiving" ColumnName="DtaeOfReleiving" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="Salary" ColumnName="Salary" />
+                <ScalarProperty Name="DegreeId" ColumnName="DegreeId" />
+                <ScalarProperty Name="SpecializationId" ColumnName="SpecializationId" />
+                <ScalarProperty Name="Photo" ColumnName="Photo" />
+                <ScalarProperty Name="Experience" ColumnName="Experience" />
+                <ScalarProperty Name="Fee" ColumnName="Fee" />
+                <ScalarProperty Name="Createdby" ColumnName="Createdby" />
+                <ScalarProperty Name="Createdon" ColumnName="Createdon" />
+                <ScalarProperty Name="Updatedby" ColumnName="Updatedby" />
+                <ScalarProperty Name="Updatedon" ColumnName="Updatedon" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Specilizations">
+            <EntityTypeMapping TypeName="SaloonManagementModel.Specilization">
+              <MappingFragment StoreEntitySet="Specilizations">
+                <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="DegreeId" ColumnName="DegreeId" />
+                <ScalarProperty Name="SpecilizationName" ColumnName="SpecilizationName" />
+                <ScalarProperty Name="SpecilizationId" ColumnName="SpecilizationId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="getEmployee" FunctionName="SaloonManagementModel.Store.getEmployee">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="SaloonManagementModel.getEmployee_Result">
+                <ScalarProperty Name="EmployeeId" ColumnName="EmployeeId" />
+                <ScalarProperty Name="EmployeeCode" ColumnName="EmployeeCode" />
+                <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
+                <ScalarProperty Name="DepartmentId" ColumnName="DepartmentId" />
+                <ScalarProperty Name="Emailid" ColumnName="Emailid" />
+                <ScalarProperty Name="Mobileno" ColumnName="Mobileno" />
+                <ScalarProperty Name="Adress" ColumnName="Adress" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="DateOfJoining" ColumnName="DateOfJoining" />
+                <ScalarProperty Name="DtaeOfReleiving" ColumnName="DtaeOfReleiving" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="Salary" ColumnName="Salary" />
+                <ScalarProperty Name="DegreeId" ColumnName="DegreeId" />
+                <ScalarProperty Name="SpecializationId" ColumnName="SpecializationId" />
+                <ScalarProperty Name="Photo" ColumnName="Photo" />
+                <ScalarProperty Name="Experience" ColumnName="Experience" />
+                <ScalarProperty Name="Fee" ColumnName="Fee" />
+                <ScalarProperty Name="Createdby" ColumnName="Createdby" />
+                <ScalarProperty Name="Createdon" ColumnName="Createdon" />
+                <ScalarProperty Name="Updatedby" ColumnName="Updatedby" />
+                <ScalarProperty Name="Updatedon" ColumnName="Updatedon" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

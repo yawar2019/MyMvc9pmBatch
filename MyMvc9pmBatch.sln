@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdoNetExample", "AdoNetExam
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataBaseFirstApproach", "DataBaseFirstApproach\DataBaseFirstApproach.csproj", "{7AB8098A-0FB4-4C0F-A78C-FE7207C57C4D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataBaseApproach2", "DataBaseApproach2\DataBaseApproach2.csproj", "{EDF07C88-735C-46A2-8198-72D4AA1994DC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeFirstApproach", "CodeFirstApproach\CodeFirstApproach.csproj", "{153709DD-CE1B-4737-8EB7-7BAB5B42596A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,14 @@ Global
 		{7AB8098A-0FB4-4C0F-A78C-FE7207C57C4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7AB8098A-0FB4-4C0F-A78C-FE7207C57C4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7AB8098A-0FB4-4C0F-A78C-FE7207C57C4D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EDF07C88-735C-46A2-8198-72D4AA1994DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDF07C88-735C-46A2-8198-72D4AA1994DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDF07C88-735C-46A2-8198-72D4AA1994DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDF07C88-735C-46A2-8198-72D4AA1994DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{153709DD-CE1B-4737-8EB7-7BAB5B42596A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{153709DD-CE1B-4737-8EB7-7BAB5B42596A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{153709DD-CE1B-4737-8EB7-7BAB5B42596A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{153709DD-CE1B-4737-8EB7-7BAB5B42596A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
