@@ -26,6 +26,5 @@ namespace DataBaseApproach2.Models
         public string MobileNo { get; set; }
         public Nullable<bool> Available { get; set; }
         public Nullable<System.DateTime> CreatedOn { get; set; }
-        public string EmailId { get; set; }
     }
 }

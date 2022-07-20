@@ -44,9 +44,7 @@
         <th>
             @Html.DisplayNameFor(model => model.CreatedOn)
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.EmailId)
-        </th>
+        
         <th></th>
     </tr>
 
@@ -85,9 +83,7 @@
         <td>
             @Html.DisplayFor(modelItem => item.CreatedOn)
         </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.EmailId)
-        </td>
+       
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.EmpId }) |
             @Html.ActionLink("Details", "Details", new { id=item.EmpId }) |
