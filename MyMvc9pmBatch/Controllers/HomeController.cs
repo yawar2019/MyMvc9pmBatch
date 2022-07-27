@@ -9,9 +9,17 @@ namespace MyMvc9pmBatch.Controllers
     public class HomeController : Controller
     {
         // GET: Home
-        public ActionResult Index()
+        public EmptyResult Index()
         {
-            return View();
+            return new EmptyResult();
+        }
+        public ViewResult Index3()
+        {
+            return   View();
+        }
+        public JavaScriptResult Index2()
+        {
+            return JavaScript("alert('hello world');");
         }
     }
 }

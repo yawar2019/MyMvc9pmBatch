@@ -43,5 +43,13 @@ namespace DapperExample.Models
             int i = con.Execute("usp_updateEmployeeById", param: param, commandType: System.Data.CommandType.StoredProcedure);
             return i;
         }
+
+        public int DeleteEmployee(int? id)
+        {
+            var param = new DynamicParameters();
+            param.Add("@EmpId", id);
+            int i = con.Execute("usp_DeleteEmployeeById", param: param, commandType: System.Data.CommandType.StoredProcedure);
+            return i;
+        }
     }
 }
