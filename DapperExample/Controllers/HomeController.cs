@@ -12,6 +12,7 @@ namespace DapperExample.Controllers
         EmployeeContext db = new EmployeeContext();
         public ActionResult Index()
         {
+            ViewBag.Emp = new SelectList(db.GetAllEmployees(), "EmpId", "EmpName");
             return View(db.GetAllEmployees());
         }
 
