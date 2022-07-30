@@ -1,0 +1,26 @@
+﻿@model  MyMvc9pmBatch.Models.employeeDetail
+@{
+    ViewBag.Title = "HtmlHelperExample";
+}
+
+<h2>HtmlHelperExample</h2>
+
+@Html.TextBox("afsdfa","Vijay",new { style = "color:green;background-color:black",@class="form-control",@id="empId", @onchange = "fun()" })<br />
+<input type="text" name="name" value="priya" style="color:red;background-color:greenyellow;" class="form-control" onchange="fun()" /><br />
+@Html.TextBoxFor(o=>o.EmpName,new { @onchange = "fun()" })<br />
+@Html.EditorFor(x=>x.EmpSalary)<br />
+<br />
+@Html.Password("pwd")
+@Html.DropDownList("Empdet",(IEnumerable<SelectListItem>)ViewBag.Emp,"Select Employee")
+<br />
+@Html.EditorForModel(Model)
+
+<script src="~/scripts/jquery-1.10.2.min.js"></script>
+<script>
+    $('#Empdet').on("change", function () {
+        alert($('#Empdet option:selected').text());
+        alert($('#Empdet option:selected').val());
+    })
+
+    
+</script>

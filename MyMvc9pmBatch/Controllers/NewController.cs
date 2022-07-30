@@ -286,5 +286,16 @@ namespace MyMvc9pmBatch.Controllers
             return RedirectToRoute("Default21");
         }
 
+        public ActionResult HtmlHelperExample()
+        {
+            EmployeeEntities db = new Models.EmployeeEntities();
+            ViewBag.Emp = new SelectList(db.employeeDetails, "EmpId", "EmpName", 68035);
+            employeeDetail emp = new employeeDetail();
+            emp.EmpId = 1;
+            emp.EmpName = "james";
+            emp.EmpSalary = 67867;
+            return View(emp);
+        }
+
     }
 }
