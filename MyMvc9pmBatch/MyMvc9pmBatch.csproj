@@ -157,6 +157,11 @@
     <None Include="scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="scripts\jquery-1.10.2.js" />
     <Content Include="scripts\jquery-1.10.2.min.js" />
+    <None Include="scripts\jquery.validate-vsdoc.js" />
+    <Content Include="scripts\jquery.validate.js" />
+    <Content Include="scripts\jquery.validate.min.js" />
+    <Content Include="scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="scripts\modernizr-2.6.2.js" />
     <Content Include="Web.config" />
     <Content Include="Views\New\GetMeView.cshtml" />
@@ -191,6 +196,7 @@
       <DependentUpon>EmployeeDetailModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\EmployeeeModel.cs" />
+    <Compile Include="Models\RegistrationModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -219,6 +225,7 @@
     <Content Include="Views\New\getAccessJsonData.cshtml" />
     <Content Include="Views\Home\Index3.cshtml" />
     <Content Include="Views\New\HtmlHelperExample.cshtml" />
+    <Content Include="Views\Home\Registration.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

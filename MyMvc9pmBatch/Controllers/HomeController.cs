@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MyMvc9pmBatch.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -21,5 +22,21 @@ namespace MyMvc9pmBatch.Controllers
         {
             return JavaScript("alert('hello world');");
         }
+
+        public ActionResult Registration()
+        {
+            EmployeeEntities db = new Models.EmployeeEntities();
+            ViewBag.Country = new SelectList(db.employeeDetails.ToList(), "EmpId", "EmpName");
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Registration(RegistrationModel Reg)
+        {
+            EmployeeEntities db = new Models.EmployeeEntities();
+            ViewBag.Country = new SelectList(db.employeeDetails.ToList(), "EmpId", "EmpName");
+            return View();
+        }
+
     }
 }
