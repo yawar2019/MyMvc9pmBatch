@@ -38,5 +38,12 @@ namespace MyMvc9pmBatch.Controllers
             return View();
         }
 
+        public ActionResult ValidationExample()
+        {
+          
+            return View();
+        }
+
+
     }
 }
