@@ -15,6 +15,7 @@ namespace MyMvc9pmBatch.Models
         [Compare("Password", ErrorMessage = "Password and ConfirmPassword Mismatch")]
         public string ConfirmPassword { get; set; }
         [DataType(DataType.DateTime)]
+        [RegularExpression("^[A-Za-z]*$", ErrorMessage ="only characters Allowed")]
         public string Dob { get; set; }
         [DataType(DataType.EmailAddress, ErrorMessage = "Invalid EmailId")]//.@
         public string EmailId { get; set; }

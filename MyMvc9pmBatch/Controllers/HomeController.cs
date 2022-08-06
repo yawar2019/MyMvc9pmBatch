@@ -44,6 +44,14 @@ namespace MyMvc9pmBatch.Controllers
             return View();
         }
 
-
+        [HttpPost]
+        public ActionResult ValidationExample(RegistrationModel emp)
+        {
+            if(ModelState.IsValid)
+            {
+                return Content("ValideData");
+            }
+            return View();
+        }
     }
 }
