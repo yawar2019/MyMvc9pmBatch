@@ -1,4 +1,5 @@
-﻿using MyMvc9pmBatch.Models;
+﻿using MyMvc9pmBatch.FilterExample;
+using MyMvc9pmBatch.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,6 +15,8 @@ namespace MyMvc9pmBatch.Controllers
         {
             return "hello world";
         }
+        [CustomFilter]
+
         public string GetEmpId(int id)
         {
             return "My Employee Id is "+ id;
@@ -105,9 +108,10 @@ namespace MyMvc9pmBatch.Controllers
 
             return View(emp);
         }
-
+        [CustomFilter]
         public ViewResult GetMeView7(int? id)
         {
+            //CustomFilter
             List<EmployeeeModel> listEmpObj = new List<Models.EmployeeeModel>();
 
             EmployeeeModel emp = new EmployeeeModel();
@@ -129,6 +133,8 @@ namespace MyMvc9pmBatch.Controllers
             listEmpObj.Add(emp);
             listEmpObj.Add(emp1);
             listEmpObj.Add(emp2);
+
+
 
             DepartmentModel dept = new DepartmentModel();
             dept.DeptId = 1211;
