@@ -20,7 +20,7 @@ namespace MyMvc9pmBatch.FilterExample
 
         public override void OnResultExecuting(ResultExecutingContext filterContext)
         {
-
+            (filterContext.Result as ViewResult).ViewBag.test = "Vamshi";
         }
 
         public override void OnResultExecuted(ResultExecutedContext filterContext)
