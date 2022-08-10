@@ -6,27 +6,26 @@ using System.Web.Mvc;
 
 namespace MyMvc9pmBatch.FilterExample
 {
-    [AttributeUsage(AttributeTargets.Method)]
-    public class CustomFilter :Attribute, IActionFilter,IResultFilter
+    public class CustomFilter :ActionFilterAttribute
     {
-        public void OnActionExecuted(ActionExecutedContext filterContext)
+
+        public override void OnActionExecuting(ActionExecutingContext filterContext)
         {
-            throw new NotImplementedException();
+            base.OnActionExecuting(filterContext);
+        }
+        public override void OnActionExecuted(ActionExecutedContext filterContext)
+        {
+            base.OnActionExecuted(filterContext);
         }
 
-        public void OnActionExecuting(ActionExecutingContext filterContext)
+        public override void OnResultExecuting(ResultExecutingContext filterContext)
         {
-            throw new NotImplementedException();
+
         }
 
-        public void OnResultExecuted(ResultExecutedContext filterContext)
+        public override void OnResultExecuted(ResultExecutedContext filterContext)
         {
-            throw new NotImplementedException();
-        }
-
-        public void OnResultExecuting(ResultExecutingContext filterContext)
-        {
-            throw new NotImplementedException();
+            base.OnResultExecuted(filterContext);
         }
     }
 }

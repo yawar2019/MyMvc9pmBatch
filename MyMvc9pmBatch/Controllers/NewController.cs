@@ -8,6 +8,7 @@ using System.Web.Mvc;
 
 namespace MyMvc9pmBatch.Controllers
 {
+
     public class NewController : Controller
     {
         // GET: New Vamsi
@@ -47,6 +48,7 @@ namespace MyMvc9pmBatch.Controllers
             ViewBag.employeedDetail = emp;
             return View();
         }
+        [CustomFilter]
 
         public ActionResult GetMeView4()
         {
@@ -70,7 +72,7 @@ namespace MyMvc9pmBatch.Controllers
             ViewBag.employeedDetail = listObj;
             return View();
         }
-
+        [CustomFilter]
         public ActionResult GetMeView5()
         {
             List<EmployeeeModel> listObj = new List<EmployeeeModel>();
@@ -108,7 +110,6 @@ namespace MyMvc9pmBatch.Controllers
 
             return View(emp);
         }
-        [CustomFilter]
         public ViewResult GetMeView7(int? id)
         {
             //CustomFilter
@@ -303,5 +304,11 @@ namespace MyMvc9pmBatch.Controllers
             return View(emp);
         }
 
+        [CustomFilter]
+        public ActionResult GetFilterExample()
+        {
+            ViewBag.test = "priya";
+            return View();
+        }
     }
 }

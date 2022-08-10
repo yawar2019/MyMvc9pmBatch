@@ -229,6 +229,7 @@
     <Content Include="Views\New\HtmlHelperExample.cshtml" />
     <Content Include="Views\Home\Registration.cshtml" />
     <Content Include="Views\Home\ValidationExample.cshtml" />
+    <Content Include="Views\New\GetFilterExample.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
