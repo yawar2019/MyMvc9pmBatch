@@ -34,7 +34,17 @@ namespace MyMvc9pmBatch.Controllers
             return View();
         }
 
-        
+        [Authorize(Roles="Admin")]
+        public ActionResult AboutUS()
+        {
+            return View();
+        }
+
+        [Authorize(Roles ="Manager")]
+        public ActionResult ContactUs()
+        {
+            return View();
+        }
         public ActionResult SignOut()
         {
             FormsAuthentication.SignOut();
