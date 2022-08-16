@@ -50,5 +50,18 @@ namespace MyMvc9pmBatch.Controllers
             FormsAuthentication.SignOut();
             return RedirectToAction("Login");
         }
+
+        [OutputCache(Duration =10,Location =System.Web.UI.OutputCacheLocation.Client)]
+        public ActionResult GetOurTime()
+        {
+            return View();
+        }
+
+        public ActionResult ConsumeGetService()
+        {
+            ServiceReference1.WebService1SoapClient webasp = new ServiceReference1.WebService1SoapClient();
+            int r=webasp.Result(12,87);
+            return Content("Got Result"+r);
+        }
     }
 }

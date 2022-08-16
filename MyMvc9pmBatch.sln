@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyMvc9pmBatch", "MyMvc9pmBatch\MyMvc9pmBatch.csproj", "{54360369-063B-4AB4-964C-53669437F208}"
+	ProjectSection(ProjectDependencies) = postProject
+		{90B05348-B5CD-422C-8FAC-FB706DE658F0} = {90B05348-B5CD-422C-8FAC-FB706DE658F0}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCPart2", "MVCPart2\MVCPart2.csproj", "{924D3AEA-9886-4951-9564-879460690A88}"
 EndProject
@@ -18,6 +21,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DapperExample", "DapperExample\DapperExample.csproj", "{8A31D58E-E922-466F-BA95-1E4966F05E58}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModelFirstApproachExample", "ModelFirstApproachExample\ModelFirstApproachExample.csproj", "{C738D875-0FC6-4B49-817D-EB11C3A2DFB0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ErrorHandleFilter", "ErrorHandleFilter\ErrorHandleFilter.csproj", "{CED01566-0B5E-42BD-9E7F-324B0DEDBE87}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebServices", "WebServices\WebServices.csproj", "{90B05348-B5CD-422C-8FAC-FB706DE658F0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +64,14 @@ Global
 		{C738D875-0FC6-4B49-817D-EB11C3A2DFB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C738D875-0FC6-4B49-817D-EB11C3A2DFB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C738D875-0FC6-4B49-817D-EB11C3A2DFB0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CED01566-0B5E-42BD-9E7F-324B0DEDBE87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CED01566-0B5E-42BD-9E7F-324B0DEDBE87}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CED01566-0B5E-42BD-9E7F-324B0DEDBE87}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CED01566-0B5E-42BD-9E7F-324B0DEDBE87}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90B05348-B5CD-422C-8FAC-FB706DE658F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90B05348-B5CD-422C-8FAC-FB706DE658F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90B05348-B5CD-422C-8FAC-FB706DE658F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90B05348-B5CD-422C-8FAC-FB706DE658F0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
